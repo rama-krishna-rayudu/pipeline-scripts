@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/selenium-saikrishna/maven.git'
+                git 'git@github.com:rama-krishna-rayudu/src.git'
             }
         }
         stage('ContBuild')
@@ -37,7 +37,7 @@ pipeline
     {
         success
         {
-            input message: 'Waiting for approval from DM', submitter: 'Srinivas'
+            input message: 'Waiting for approval from DM', submitter: 'Rama krishna'
     sh 'scp /var/lib/jenkins/workspace/Declarative_Pipeline/webapp/target/webapp.war vagrant@10.10.10.33:/var/lib/tomcat7/webapps/prodenv.war'
         }
         failure
